@@ -23,5 +23,5 @@ def readadc(adcnum):
 while True:
     ldr_value = readadc(ldr_channel)
     print "---------------------------------------"
-    print("LDR Value: ".ldr_value)
+    print("LDR Value: %d" % ldr_value)
     time.sleep(delay)
