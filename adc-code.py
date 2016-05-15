@@ -18,10 +18,10 @@ def readadc(adcnum):
     r = spi.xfer2([1, 8 + adcnum << 4, 0])
     data = ((r[1] & 3) << 8) + r[2]
     return data
-	
+    
  
 while True:
-	ldr_value = readadc(ldr_channel)
-	print "---------------------------------------"
-	print("LDR Value: ".ldr_value)
+    ldr_value = readadc(ldr_channel)
+    print "---------------------------------------"
+    print("LDR Value: ".ldr_value)
     time.sleep(delay)
